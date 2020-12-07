@@ -6,4 +6,5 @@ body{
 img {
 	width:10%;
 	border: solid;
+	overflow:hidden;
 }
