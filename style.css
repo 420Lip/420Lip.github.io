@@ -1,0 +1,310 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #333333;
+}
+
+/*   Barre de navigation   */
+
+header{
+width: 100%;
+height: auto;
+margin: auto;
+position: sticky;
+top: 0;
+z-index: 100;
+background-color: whitesmoke ;
+display: flex;
+justify-content: space-between;
+}
+
+.logo{
+    width: 7vw;
+    height: auto;
+    position: relative;
+    top: 15px;
+    padding-bottom: 20px;
+}
+
+/*    Boutons de navigation   */
+
+.navigation{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.btn1:hover{
+    color: #EE5A24;
+}
+
+.btn2:hover{
+    color: #EE5A24;
+}
+
+.btn3:hover{
+    color: #EE5A24;
+}
+
+.navigation a{
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-family: 'Revalia';
+}
+
+/*   SlideShow   */
+
+.slideshow-container {
+	overflow: hidden;
+	position: relative;
+    margin: auto;
+	width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.mySlides {
+	display: none;
+	height: auto;
+}
+.mySlides img {
+	max-width: 100%;
+    height: auto;
+}
+
+/*   Article Concept   */
+
+.container{
+    width: 75%;
+    height: auto;
+    margin: auto;
+    padding-top: 50px;
+    display: flex;
+    text-align: center;
+}
+
+.article_concept{
+    width: 40%;
+    height: auto;
+    padding: 20px;
+    background-image: url(img/orange.jpg)
+}
+
+.article_concept h1{
+    font-family: "Reenie Beanie";
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    overflow: auto;
+}
+
+.article_concept p{
+    font-family: "Revalia";
+    font-size: 0.9vw;
+    overflow: auto;
+}
+     
+.image_concept{
+    width: 60%;
+    height: auto;
+}
+
+.concept_button {
+	background-color:black;
+	border-radius:1.2vw;
+	display:inline-block;
+	color:white;
+	font-family:Arial;
+	font-size:1vw;
+	padding:16px 31px;
+    text-decoration:none;
+}
+
+.concept_button:hover{
+    color: #EE5A24;
+}
+
+/*   Offre   */
+
+
+.offre_content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    font-family: "Righteous";
+}
+
+.offre_content p{
+    font-size: 3vw;
+    margin-right: -61px;
+    z-index: 3;
+    color: #EE5A24 ;
+}
+
+.offre_image{
+    width: 20vw;
+    height: auto;
+    margin-right: -100px;
+    z-index: 2;
+}
+
+.offre_text{
+    width: 30vw;
+    height: 100%;
+    background-color: #EE5A24;
+    text-align: center; 
+    padding-bottom: 10px;
+}
+
+.offre_text h1{
+    font-size: 3vw;
+
+}.offre_text h2{
+    font-size: 1vw;
+}
+
+/*   Article Coaching   */
+
+.container_coaching{
+    width: 75%;
+    height: auto;
+    margin: auto;
+    padding-top: 100px;
+    display: flex;
+    text-align: center;
+}
+
+.article_coaching{
+    width: 40%;
+    height: auto;
+    padding: 20px;
+    background-image: url(img/orange.jpg)
+}
+
+.article_coaching h1{
+    font-family: "Reenie Beanie";
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    overflow: auto;
+}
+
+.container_coaching h2{
+    font-family: "Revalia";
+}
+
+
+.article_coaching p{
+    font-family: "Revalia";
+    font-size: 0.9vw;
+    overflow: auto;
+    padding: 15px;
+}
+
+     
+.image_coaching{
+    width: 60%;
+    height: auto;
+}
+
+/*   Actualites   */
+.actualites{
+    width: 100%;
+    height: 500px;
+    margin-top: 100px;
+    background-color: #ecf0f1 ;
+}
+
+.actualites>h1{
+text-align: center;
+font-family: "Revalia";
+color: #EE5A24;
+}
+
+.actu_container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    font-family: "Righteous";
+    text-align: center;
+}
+
+.actu{
+    width: 18vw;
+    background-color: whitesmoke;
+  
+}
+
+.actu img{
+    width: 18vw;
+    border: #EE5A24 1px solid;
+}
+
+.actu h1{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   Footer   */
+
+footer{
+    width: 100%;
+    height:135px;
+    background-color: whitesmoke;
+    margin-top: 100px;
+    display: flex ;
+    justify-content: space-around  ;
+    font-family: "Revalia";
+    font-size: 0.8em;
+}
+
+
+.avis{
+    text-align: center;
+}
+
+.checked{
+    color: orange;
+}
+
+
+
+.avis a{
+    font-size: 1vw;
+}
+
+.salles{
+    display: flex;
+    justify-content: space-around;
+}
+
+.reseaux{
+    display: flex;
+    justify-content: space-around;
+}
