@@ -545,10 +545,17 @@ ul{
     footer{
 
         font-size: 0.5em;
+        text-align: left;
     }
 
     ul{
-        font-size: 1.3em ;
+        font-size: 1.5vw ;
+    }
+
+    li{
+        padding-right: 20px ;
     }
 
 }
+
+
