@@ -499,6 +499,7 @@ ul{
 
     .offre_text{
         width: 50%;
+        max-height: 470px;
     }
 
     .offre_text h1{
@@ -546,5 +547,8 @@ ul{
         font-size: 0.5em;
     }
 
-}
+    ul{
+        font-size: 1.3em ;
+    }
 
+}
