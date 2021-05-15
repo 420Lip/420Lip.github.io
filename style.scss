@@ -1,0 +1,741 @@
+$yellow : #db9d47;
+$red : #ff6666;
+$blue : #3c6997;
+
+body {
+    margin: 0;
+
+    // Header
+    header {
+
+        // Nouvelles regles
+        #nouvelles_regles {
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            line-height: 18px;
+
+            // Version mobile
+            @media screen and (max-width: 375px) {
+                flex-direction: column;
+                height: auto;
+                text-align: center;
+            }
+
+            // Fin version
+            strong {
+                color: red;
+            }
+
+            a {
+                color: blue;
+            }
+
+            span {
+                margin-left: 10px;
+            }
+
+            img {
+                width: 145px;
+                height: 50px;
+            }
+        }
+
+        // Fin nouvelles regles
+
+        // Nav
+        nav {
+            width: 100%;
+            height: 100px;
+            background-color: $blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+
+            @media screen and (max-width: 375px) {
+                justify-content: space-between;
+            }
+
+            #nav-links {
+                display: inline-flex;
+                align-items: center;
+                padding-inline-start: 0;
+                font-family: 'Lato', sans-serif;
+                font-weight: 600;
+
+                a:hover {
+                    color: $red;
+                }
+
+                // Version mobile
+                @media screen and (max-width: 375px) {
+                    padding-inline-start: 0;
+                }
+
+                // Fin version
+                .dropdown-menu {
+                    .dropdown:hover .dropdown-content {
+                        display: block;
+                    }
+
+                    .dropdown {
+                        position: relative;
+                        display: inline-block;
+
+
+                        .dropbtn {
+                            background-color: inherit;
+                            outline: none;
+                            color: white;
+                            padding: 16px;
+                            font-size: 16px;
+                            border: none;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: $red;
+                            }
+                        }
+                    }
+
+                    .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        background-color: #f9f9f9;
+                        min-width: 160px;
+                        font-family: 'Lato', sans-serif;
+
+                        a {
+                            color: black;
+                            padding: 12px 16px;
+                            text-decoration: none;
+                            display: block;
+                            font-family: 'Lato', sans-serif;
+
+                            &:hover {
+                                background-color: #f1f1f1;
+                                color: $red;
+                            }
+                        }
+                    }
+                }
+
+                li {
+                    display: inline;
+                    list-style-type: none;
+                    color: white;
+                    margin-left: 25px;
+                    margin-right: 25px;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .link {
+
+                    // Version mobile
+                    @media screen and (max-width: 375px) {
+                        display: none;
+                    }
+
+                    // Fin version
+                }
+            }
+
+            // Burger menu mobile
+            .burger_menu {
+                width: auto;
+                height: auto;
+                margin: auto 50px;
+                padding-bottom: 10px;
+                display: none;
+
+                // Affichage sous 375px
+                @media screen and (max-width: 375px) {
+                    display: initial;
+                }
+
+                // Fin affichage
+
+                .menu-btn {
+                    display: flex;
+                    align-items: center;
+                    top: 0px;
+                    width: 20px;
+                    height: 28px;
+
+                    .menu_btn_burger {
+                        position: relative;
+                        border-radius: 10px;
+                        width: 20px;
+                        height: 4px;
+                        background-color: white;
+
+                        &::after,
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            border-radius: 10px;
+                            width: 100%;
+                            height: 100%;
+                            background-color: white;
+                        }
+
+                        &::before {
+                            transform: translateY(-8px);
+                        }
+
+                        &::after {
+                            transform: translateY(8px);
+                        }
+                    }
+                }
+
+                .menu-btn.open .menu_btn_burger {
+                    background: transparent;
+                }
+
+                .menu-btn.open {
+                    & ::before {
+                        transform: rotate(45deg);
+                    }
+
+                    & ::after {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+            // Fin burger menu mobile
+
+            // Fin nav
+        }
+
+        .navOpen a {
+            font-family: 'Lato', sans-serif;
+        }
+
+        //  Menu deroulant
+        .menu {
+            width: 100%;
+            background-color: whitesmoke;
+            z-index: 9999;
+
+            a {
+                font-family: "Revalia";
+                text-decoration: none;
+                display: block;
+                padding: 30px;
+                text-align: center;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+
+        .nav {
+            height: 0;
+            transition-duration: 0.2s;
+
+            a {
+                color: transparent;
+                transition-duration: 0.1s
+            }
+        }
+
+        .navOpen {
+            height: auto;
+            display: initial;
+            transition-duration: 0.2s;
+
+            a {
+                color: black;
+                transition-duration: 0.2s;
+            }
+
+        }
+
+        .navOpen a {
+            font-family: 'Lato', sans-serif;
+        }
+    }
+
+    // Fin menu deroulant
+
+    // Fin header
+
+    // Slider
+    #slider {
+        .slideshow-container {
+            margin: auto;
+
+            .mySlides {
+                display: none;
+            }
+
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+                from {
+                    opacity: .4
+                }
+
+                to {
+                    opacity: 1
+                }
+            }
+
+            @keyframes fade {
+                from {
+                    opacity: .4
+                }
+
+                to {
+                    opacity: 1
+                }
+            }
+        }
+    }
+
+    // Fin slider
+
+    // Article elevage 
+    #elevage {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: $yellow;
+        color: white;
+
+        h1 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+
+            // Version mobile
+            @media screen and (max-width: 375px) {
+                font-size: 20px;
+            }
+
+            // Fin version
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            // Version mobile
+            @media screen and (max-width: 375px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            // Fin version
+
+            .img_container {
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                // Version mobile
+                @media screen and (max-width: 375px) {
+                    width: 60%;
+                }
+
+                // Fin version
+
+                img {
+                    width: 50%;
+                    height: auto;
+                }
+
+                span {
+                    margin-block-end: 40px;
+                    font-family: 'Lato', sans-serif;
+
+                    // Version mobile
+                    @media screen and (max-width: 375px) {
+                        font-size: 12px;
+                    }
+
+                    // Fin version
+                }
+            }
+
+            // Disposition version mobile
+            .un {
+                @media screen and (max-width: 375px) {
+                    order: -2;
+                }
+            }
+
+            .deux {
+                @media screen and (max-width: 375px) {
+                    order: -1;
+                }
+            }
+
+            // Fin disposition
+
+            .text_container {
+                width: 40%;
+
+                // Version mobile
+                @media screen and (max-width: 375px) {
+                    width: 80%;
+                }
+
+                // Fin version
+                p {
+                    font-size: 1em;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 500;
+                }
+
+                button {
+                    height: 50px;
+                    background: none;
+                    outline: none;
+                    border: 5px white solid;
+                    margin-block-end: 25px;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-family: 'Lato', sans-serif;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    // Fin article elevage
+
+    // Article le parc
+    #parc {
+        width: 100%;
+        height: auto;
+        background-color: $red;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+
+            // Version mobile
+            @media screen and (max-width: 375px) {
+                order: -3;
+                font-size: 20px;
+            }
+
+            // Fin version
+        }
+
+        p {
+            width: 35%;
+            margin-block-end: 50px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+
+            // Version mobile
+            @media screen and (max-width: 375px) {
+                width: 80%;
+                order: -2;
+            }
+
+            // Fin version
+        }
+
+        #modal_container {
+            width: 80%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            // Version mobile 
+            @media screen and (max-width: 375px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            // Fin version
+
+            .block {
+                width: 25%;
+                margin-block-end: 50px;
+
+                // Version mobile
+                @media screen and (max-width: 375px) {
+                    width: 75%;
+                }
+
+                // Fin version
+
+                img {
+                    width: 80%;
+                }
+            }
+        }
+
+        span {
+            margin-block-end: 50px;
+
+            // Version mobile
+            @media screen and (max-width: 375px) {
+                order: -1;
+                font-size: 10px;
+                margin-block-end: 5px;
+            }
+
+            // Fin version
+        }
+    }
+
+    // Fin article parc
+
+    // Article conseils
+    #conseils {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        background-color: $blue;
+
+        // Version mobile
+        @media screen and (max-width: 375px) {
+            flex-direction: column;
+        }
+
+        // Fin version
+
+        h3 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+
+            @media screen and (max-width: 375px) {
+                font-size: 20px;
+            }
+        }
+
+        #img_conseils {
+            width: 40%;
+            height: auto;
+
+            // Version mobile
+            @media screen and (max-width: 375px) {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        #text_conseils {
+            width: 40%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            color: white;
+            font-size: 1em;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+
+            // Verson mobile
+            @media screen and (max-width: 375px) {
+                width: 80%;
+                text-align: center;
+            }
+
+            // Fin version
+            button {
+                width: 150px;
+                height: 50px;
+                align-self: flex-end;
+                outline: none;
+                background-color: $red;
+                border: none;
+
+                // Version mobile
+                @media screen and (max-width: 375px) {
+                    align-self: center;
+                    margin-block-end: 25px;
+                }
+
+                // Fin version
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    // Fin article conseils
+
+    // Article pension
+    #pension {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        @media screen and (max-width: 375px) {
+            img {
+                width: 50%;
+                height: auto;
+            }
+        }
+
+        h4 {
+            font-size: 2em;
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+
+            // Version mobile
+            @media screen and (max-width: 375px) {
+                font-size: 1.3em;
+            }
+
+            // Fin version
+        }
+
+        p {
+            width: 50%;
+            margin-block-end: 50px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+
+            // Version mobile
+            @media screen and (max-width: 375px) {
+                width: 80%;
+            }
+
+            // Fin version
+        }
+    }
+
+    // Fin article pension
+
+    // Footer
+    footer {
+        width: 100%;
+        height: auto;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+
+        // Version mobile
+        @media screen and (max-width: 375px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        // Fin version
+
+        #contact {
+            margin-block-start: 25px;
+
+            p {
+                margin-block-start: 0;
+                margin-block-end: 0;
+            }
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        #reseaux {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-block-start: 25px;
+
+            span {
+                text-align: center;
+            }
+
+            ul {
+                padding-inline-start: 0;
+
+                li {
+                    display: inline;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
+
+                #fb {
+                    i {
+                        color: #1976d2;
+                    }
+                }
+
+                #insta {
+                    i {
+                        color: #ff1400;
+                    }
+                }
+
+                #snap {
+                    color: yellow;
+                }
+            }
+        }
+
+        #liens {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-block-start: 25px;
+
+            ul {
+                padding-inline-start: 0;
+
+                li {
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
